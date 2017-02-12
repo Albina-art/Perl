@@ -1,0 +1,6 @@
+<h2> Все пользователи </h2>
+<ul class = "user_list">
+	<% for user in users %>
+		<a href = "/user/<% user.id%>"><% user.login %></a><br>
+	<% end %>
+</ul>

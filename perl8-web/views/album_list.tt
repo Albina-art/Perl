@@ -1,0 +1,43 @@
+<h2> Альбомы пользователя 
+	<p><% user.name or user.login %></p>
+</h2>
+<div class = "album" >
+	<% if user.id == current_user.id %>
+		<div class = "href">
+			<a href = "/album/update/" > Добавить альбом</a>
+			<a href = "/album/parse" > Парсинг альбома</a>
+		</div>
+	<% end %>
+	<%if albums.size %>
+		<table >
+			<tr>
+				<th>Название альбома</th>
+				<th>Группа</th>
+				<th>Год выпуска</th>
+				<th>Посмотреть</th><th>Редактировать</th>
+			</tr>
+				<% for album in albums %>
+					<tr>
+						<td><% album.album_name %></td>
+						<td><% album.band_name %></td>
+						<td><% album.year %></td>
+							<td ><a href = "/track/list/<% album.id %>">
+								<img src="/images/look.png" title = "Посмотреть"></a>
+							</td>
+						<td class="non">
+							<% if user.id == current_user.id %>
+								<a href="/album/update/<% album.id%>">
+									<img src="/images/logosmall.png" 
+									title = "Редактировать">
+								</a>
+							<% else %>
+								<img src="/images/err.jpg" title = "Нельзя"></a>
+							<% end %>
+						</td>	
+					</tr>	
+				<% end %>		
+		</table>	
+	<% else %>	
+		<p class="big_track"> Нет альбомов </p>
+	<% end %>
+</div>

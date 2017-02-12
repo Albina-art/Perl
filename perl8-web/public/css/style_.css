@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/perldancer-bg.jpg");
+    color: #FEDE72;
+    font-family: "Lobster,Arial";
+}
+
+header h1 {
+    /*background-image: url("/images/perldancer.jpg");*/
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 50px;
+    margin-top:0px;
+    background-color: black;
+    text-align: center;
+    color: #FEDE72;
+    font-family: Lobster;
+}
+
+h2 {
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 50px;
+    font-size: 40px;
+    top: 20px;
+    width: 90%;
+    text-align: center;
+    position: fixed;
+    color: black;
+    font-family: Lobster;
+}
+h2 > p { 
+    height: 50px;
+    top: 40px;
+    left: 940px;
+    font-size: 55px;
+    position: fixed;
+    font-family: Arial;
+    color: #762C1E ;
+    margin-top: 0px;
+}
+button {
+    background-color: black;
+    border: none;
+    color:#FEDE72;
+    margin-top: 5px;
+    left: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+     border-left: 2px solid white;
+     border-top: 2px solid white;
+     border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    font-family: "Lobster";
+}
+a {
+    color: #FEDE72;
+}
+a.add {
+    position: fixed;
+    color: red;
+    top: 105px;
+    left: 500px;
+    text-align: center;
+    top: 100px;
+    color: white;
+    left:450px;
+    position: fixed; 
+    font-size: 20px;
+}
+a.name {
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+.href a {
+    font-size: 20px;
+    color: black;
+}
+
+textarea {
+    margin-top: 50px;
+    text-align: left;
+}
+
+tr {
+    height:10px;
+}
+th, td {
+    height: 20px;
+    text-align: left;
+    border-bottom: 2px solid white;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    top: 105px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    border-collapse: collapse;
+}
+.save {
+    position: fixed;
+    top: 280px;
+    left: 250px;
+}
+.enter{
+    position: fixed;
+    top: 280px;
+    left: 250px;
+}
+.user_login{
+    position: fixed; 
+    right: 200px;
+    top: 5px;
+    color: red;
+}
+.album_labl {
+    position: fixed;
+    left: 250px; 
+    bottom: 640px;
+}
+.login_pasw {
+    position: fixed; 
+    height: 20px;
+    color: #FEDE72;
+    margin-left: 250px;
+    font-size: 20px;
+    top: 105px;
+} 
+.href {
+    font-size: 30px;
+    background-color: white;
+    color: #762C1E; 
+    text-align: center;   
+}
+.album {
+    position: fixed; 
+    height: 500px;
+    background-color: #FEDE72;
+    color: black;
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 80%;
+    font-size: 20px;
+    top: 105px;
+}
+.user_list {
+    margin-top:100px;
+    margin-left:500px;
+    margin-right:200px;
+    font-family: "Arial";
+    font-size: 20px;
+    background-color: black;   
+}
+
+
+.big_track {
+    margin-top:100px;
+color: red;
+font-size: 40px;
+    margin-left:500px;
+}
+.login_pasw label {
+    background-size: 20px;
+}
+.registr {
+    position: fixed; 
+    left: 250px; bottom: 200px; 
+    font-size: 20px;
+}
+.all_users_del {
+    top: 100px;
+    color: #FEDE72;
+    left:150px;
+    position: fixed; 
+    font-size: 20px;
+}
+button.delete {
+    position: fixed; 
+    left:200px;
+    top: 150px;
+}
+
+/*
+background-image: url("/images/perldancer.jpg");
+<li class="pesdk-react-controls__list__item">
+<div class="pesdk-react-controls__
+ pesdk-react-controls__button--withLabel">
+<img src="/images/logosmall" class="pesdk-react-controls__button__icon"><div class="pesdk-react-controls__button__label">Кисть</div></div></li>
+<img class="mk-desktop-logo dark-logo" title="" alt="" src="https://online-fotoshop.ru/wp-content/uploads/2016/08/pslogo.png">*/

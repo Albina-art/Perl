@@ -1,0 +1,24 @@
+pre {
+    background: red;
+    color: white;
+    font-size:medium;
+    position: fixed;
+    text-align: left;
+    font-weight: 900;
+    /*margin-top: 10px; */
+    width: 100%; /* Ширина слоя в пикселах */
+    height: 10px;  /*Высота слоя в пикселах */
+    padding: 1em; 
+    top: 35px;
+     font-size: 15px;
+    clear:both;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+pre.ok{
+    visibility:hidden;
+    /*невидимый*/
+}

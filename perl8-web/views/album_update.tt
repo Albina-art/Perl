@@ -1,0 +1,20 @@
+<form method="post">
+<pre class = "<% err %>">
+	<% err %>
+</pre>
+<br>
+<div class = "login_pasw">
+	<br> Название: <br>
+	<input type = "text" name = "album_name" id = "album_name"
+	value = "<% album.album_name %>" >
+	
+	<br> Год:<br>
+	<input type = "text" id = "year" 
+	value = "<% album.year %>" name = "year">
+	
+	<br> Группа: <br>
+	<input type = "text" id = "band_name" value = "<% album.band_name %>" 
+	name = "band_name">	
+	<button type = "submit" class = "enter"> Сохранить </button>
+</div>
+</form>

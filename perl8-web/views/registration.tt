@@ -1,0 +1,22 @@
+<form action = "/registration" method = "post">
+	<pre class = "<% err %>">
+		<% err %>
+	</pre>
+	<div class = "login_pasw">
+		<br> Логин: <br>
+		<input type = "text" id = "login" value = "<% login %>" name = "login">
+
+		<br> Имя: <br>
+		<input type = "text" id = "name" value = "<% name %>" name = "name">
+
+		<div class = "pasw">
+			Пароль: <br>
+			<input type = "password" id = "password" name = "password">
+			<br> Повторите пароль пожалуйста: <br>
+
+			<input type = "password" id = "password2" name = "password2"><br>
+
+			<button type = "submit"> Зарегистрироваться </button>
+		</div>
+	</div>
+</form>

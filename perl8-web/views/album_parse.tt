@@ -1,0 +1,15 @@
+<form method = "post">
+<pre class = "<% err %>">
+	<% err %>
+</pre>
+<div class = "login_pasw">
+	<label class = "album_labl"> Текст: </label>
+	<textarea autofocus cols = "100" rows = "30" name = "text" rows = "12">
+	</textarea><br>
+	<button type = "submit" class = "pars_album" > 
+		<a href = "/">
+			Распарсить 
+		</a>
+	</button>
+</div>
+</form>

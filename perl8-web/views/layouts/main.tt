@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="<% settings.charset %>">
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title> Музыкальная библиотека </title>
+  <link rel="stylesheet" href="<% request.uri_base %>/css/error_.css">
+  <link rel="stylesheet" href="<% request.uri_base %>/css/style_.css">
+
+<!-- Grab jQuery from a CDN, fall back to local if necessary -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">/* <![CDATA[ */
+    !window.jQuery && document.write('<script type="text/javascript" src="<% request.uri_base %>/javascripts/jquery.js"><\/script>')
+/* ]]> */</script>
+
+</head>
+<body>
+	<header> 
+	<a href = "/" class = "name">
+		<h1> Музыкальная Библиотека </h1>
+	</a> 
+	</header>
+	<% content %>
+	<p class = "registr">
+	    <% if request.path == '/login' %>
+        	<a href = "/registration"> Регистрация </a>
+       	<% elsif request.path == '/registration' %>
+        	<a href = "/login"> Вход </a>
+       	<% else %>
+	       	<div class = "all_users_del">	
+	       	  	<a href = "/logout"> Выход </a>
+
+       	  		<% if request.path != '/user_delete'%>
+	       	  		<a href = "/user_delete"> Удалить </a>
+    	   		<% end %>
+       	  		
+       	  		<% if request.path != '/user_list'%>
+    	   			<a href = "/user_list">  Пользователи </a>
+    	   		<% end %>
+       		</div>
+       	<% end %>
+     </p>
+</body>
+</html>

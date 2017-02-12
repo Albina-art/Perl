@@ -1,0 +1,88 @@
+# This is the main configuration file of your Dancer2 app
+# env-related settings should go to environments/$env.yml
+# all the settings in this file will be loaded at Dancer's startup.
+
+# Your application's name
+appname: "music_web"
+
+# The default layout to use for your application (located in
+# views/layouts/main.tt)
+layout: "main"
+
+# when the charset is set to UTF-8 Dancer2 will handle for you
+# all the magic of encoding and decoding. You should not care
+# about unicode within your app when this setting is set (recommended).
+charset: "UTF-8"
+
+# template engine
+# simple: default and very basic template engine
+# template_toolkit: TT
+
+# engines:
+
+
+# session engine
+# Simple: in-memory session store - Dancer2::Session::Simple
+# YAML: session stored in YAML files - Dancer2::Session::YAML
+#
+# Check out metacpan for other session storage options:
+# https://metacpan.org/search?q=Dancer2%3A%3ASession&search_type=modules
+#
+# Default value for 'cookie_name' is 'dancer.session'. If you run multiple
+# Dancer apps on the same host then you will need to make sure 'cookie_name'
+# is different for each app.
+#eshop.session
+#engines:
+#  session:
+#    Simple:
+#      cookie_name: testapp.session
+#
+template: "template_toolkit"
+
+engines:
+ session:
+   YAML:
+     cookie_name: eshop.session
+     is_secure: 1
+     is_http_only: 1
+
+engines:
+  template:
+    template_toolkit:
+      start_tag: '<%'
+      end_tag:   '%>'
+
+# Какие файлы доступны для использования
+
+files: 
+  dir: "uploads"
+  types:
+    file/mp3: mp3
+    file/m4r: m4r
+    file/wav: wav
+    file/wav: wma
+    file/wav: ogg
+    file/wav: aac
+    file/wav: ape
+    file/wav: flac
+
+# Независимо компилируемый 
+# программный модуль, динамически подключаемый 
+# к основной программе и предназначенный для расширения и/или
+# использования её возможностей. 
+# Плагины обычно выполняются в виде библиотек общего пользования.
+plugins:
+  Database:
+    driver: 'mysql'
+    database: 'music_library'
+    host: 'localhost'
+    port: 3306
+    username: 'root'
+    password: 'password'
+    connection_check_threshold: 10
+    dbi_params:
+      RaiseError: 1
+      AutoCommit: 1
+      on_connect_do: ["SET NAMES 'utf8'"]
+      log_queries: 1
+      handle_class: 'My::Super::Database::Handle'

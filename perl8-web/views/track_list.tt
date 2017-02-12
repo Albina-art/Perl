@@ -1,0 +1,64 @@
+<h2> Название альбома: <% album.album_name %> </h2>
+
+<% if album.user_id == current_user.id %>
+	<h3>
+		<a href="/track/update/<%album.id%>/<%album.user_id%>" class = "add"> 
+			Добавить трек
+		</a>
+	</h3>
+<% end %>
+<br>
+<% if tracks.size %>
+	<div class = "album" >
+		<table>
+				<tr>
+					<th> Название трека </th>
+					<th> Формат </th>
+					<th> Файл </th>
+					<th> Картинка </th>
+					<% if album.user_id == current_user.id %>
+						<th> Редактировать </th>
+						<th> Удалить </th>
+					<% end %>
+				</tr>
+				<% for track in tracks %>
+					<tr>
+						<td><% track.name %></td>
+						<td><% track.format %></td>
+						<td>
+							<% if track.file %>
+								<a href = "/uploads/<% track.name %>">
+									<img src = "/images/file.jpg" height="30" width="30">
+								</a>
+							<% else %>
+								<img src = "" height="30" width="30" alt = " Нет файла " class = "mini">
+							<% end %> </td>
+						<td>
+							<% if track.image_http %>
+								<a href = "<% track.image_http %>">
+									<img src = "<% track.image_http %>" alt = "Нет картинки" height="30" width="30">
+								</a>
+								<% else %>
+									<img src = "" height="30" width="30" alt = "Нет картинки" class = "mini">
+								<% end %>
+						</td>
+					<% if album.user_id == current_user.id %>
+						<td>
+							<a href = "/album/update/ <% album.id %>">
+								<img src="/images/logosmall.png" alt = "Нет картинки" title = "Редактировать">
+							</a>
+						</td>
+						<td>					
+							<a href = "/album/update/ <% album.id %>">
+								<img src="/images/del.png" alt = "Нет картинки" 
+								title = "Удалить">
+							</a>
+						</td>
+					<% end %>
+					</tr>
+				<% end %>
+		</table>
+	</div>
+<% else %>	
+	<p class = "big_track"> Нет треков </p>
+<% end %>

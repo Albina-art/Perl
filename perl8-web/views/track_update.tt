@@ -1,0 +1,24 @@
+<h2> Альбом: <% album_name %> </h2>
+<form method = "post" enctype = "multipart/form-data">
+	<pre class = "<% err %>">
+		<% err %>
+	</pre>
+	<div class = "login_pasw">
+		<br> Название: <br>
+		<input type = "text" name = "name" value = "name" >
+		
+		<br> Формат: <br>
+		<input type = "text" name = "format" value = "format">
+
+		<br> Изображение:<br>
+		<input type = "file" class="form-control" id = "file" name="file">
+
+		<br> Cсылка на изображение: <br>
+			<input type = "text" id = "image_http" 
+		value = "<% track.image_http %>" name = "image_http">
+	<br>
+		<button type = "submit" class="save" >
+			Сохранить
+		</button>
+	</div>
+</form>

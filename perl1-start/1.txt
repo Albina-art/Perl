@@ -1,0 +1,5 @@
+итого;12
+-rw-rw-r--;1;albina;albina;   0;окт;18;19:10;1.txt
+-rw-rw-r--;1;albina;albina; 193;окт;18;14:52;masmas.pl
+-rw-rw-r--;1;albina;albina;1929;окт;18;14:52;README.md
+-rw-rw-r--;1;albina;albina;1295;окт;18;18:58;отладчик

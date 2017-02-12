@@ -1,0 +1,42 @@
+Запуск отладки:
+perl -d masmas.pl < 1.txt
+> l
+Командой l просмотрим код с указанием текущей позиции:
+5==>    my @array;
+6:      my $res;
+7:      while ( <STDIN> ){
+8:          chomp();
+9:          push(@array,[split /;\s*/, $_]);
+10      }
+11:     $res = \@array;
+12:     p $res;
+13      #print Dumper (\@array);
+
+Установим точку останова (команда b) на 9ой строчке:
+> b 9 
+Будем отслеживать массив @a с помощью команды $w:
+> w @{$array[0]} 
+Запустим программу(команда с):
+> c
+Когда доходим до 9 строчке срабатывает точка останова:
+> Watchpoint 0:   @{$array[0]} changed:
+    old value:  ''
+    new value:  'итого', '16'
+main::(masmas.pl:8):        chomp();
+
+Запустим программу(команда с):
+> c
+> c
+> p @{$array[1]} 
+На выход получим
+>-rw-rw-r--1albinaalbina0сен3023:121.txt
+> print @{$array[2]}  
+>-rw-rw-r--1albinaalbina136сен3022:49main11.pl
+> print @{$array[3]}  
+>  
+> c
+> main::(masmas.pl:9):        push(@array,[split /;\s*/, $_]);
+> print @{$array[3]}  
+> -rw-rw-r--1albinaalbina204сен3023:09main1.pl
+> print $array[3][4]  
+> 204
